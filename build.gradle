@@ -1,0 +1,22 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.oleggalimov'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// https://mvnrepository.com/artifact/com.ibm.mq/mq-jms-spring-boot-starter
+	compile group: 'com.ibm.mq', name: 'mq-jms-spring-boot-starter', version: '2.0.0'
+
+	implementation 'org.springframework.boot:spring-boot-starter-jersey'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
